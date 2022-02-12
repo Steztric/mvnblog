@@ -14,10 +14,12 @@ import java.io.PrintWriter;
         initParams = {@WebInitParam(name = "ProductName", value = "Welcome Application")})
 public class SimpleServlet extends HttpServlet {
     String appName;
+    String publisher;
 
     @Override
     public void init() throws ServletException {
         appName = getInitParameter("ProductName");
+        publisher = getServletContext().getInitParameter("Publisher");
     }
 
     @Override
@@ -29,6 +31,7 @@ public class SimpleServlet extends HttpServlet {
             writer.write("<application>");
             writer.printf("<name>Hello %s!</name>", name);
             writer.printf("<product>%s</product>", appName);
+            writer.printf("<publisher>%s</publisher>", publisher);
             writer.write("</application>");
         } else {
             resp.getWriter().write("Please supply a name");

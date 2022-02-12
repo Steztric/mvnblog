@@ -30,4 +30,9 @@
         <servlet-name>SimpleServlet</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+
+    <context-param>
+        <param-name>Publisher</param-name>
+        <param-value>Fisher Software</param-value>
+    </context-param>
 </web-app>
