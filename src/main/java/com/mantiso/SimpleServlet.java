@@ -11,6 +11,11 @@ import java.io.IOException;
 public class SimpleServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.getWriter().write("Hello World!");
+        String name = req.getParameter("name");
+        if(name != null) {
+            resp.getWriter().printf("Hello %s!", name);
+        } else {
+            resp.getWriter().write("Please supply a name");
+        }
     }
 }
