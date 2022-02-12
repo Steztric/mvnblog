@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = {"/home", "*.do"}, initParams = {@WebInitParam(name = "ProductName", value = "Welcome Application")})
+@WebServlet(urlPatterns = {"/home", "*.do"},
+        name = "SimpleServlet",
+        initParams = {@WebInitParam(name = "ProductName", value = "Welcome Application")})
 public class SimpleServlet extends HttpServlet {
     String appName;
 

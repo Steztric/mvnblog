@@ -28,6 +28,6 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SimpleServlet</servlet-name>
-        <url-pattern>/other</url-pattern>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
 </web-app>
