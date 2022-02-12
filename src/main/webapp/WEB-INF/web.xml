@@ -9,6 +9,10 @@
         <servlet-name>Controller</servlet-name>
         <servlet-class>com.mantiso.BlogController</servlet-class>        
     </servlet>
+    <servlet>
+        <servlet-name>Simple</servlet-name>
+        <servlet-class>com.mantiso.SimpleServlet</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
@@ -17,5 +21,9 @@
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/blog</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Simple</servlet-name>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 </web-app>
